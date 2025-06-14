@@ -7,7 +7,7 @@ body {
   header {
     display: flex;
     justify-content: space-between;
-    background-color: #004d40;
+    background-color: #0e3461;
     padding: 1rem;
     color: white;
   }
@@ -52,7 +52,7 @@ body {
   }
   
   button {
-    background-color: #004d40;
+    background-color: #1b55b2;
     color: white;
     padding: 0.75rem;
     border: none;
