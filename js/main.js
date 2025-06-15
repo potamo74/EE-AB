@@ -1,22 +1,40 @@
-document.getElementById("contactForm").addEventListener("submit", async function(e) {
+document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
-    const formData = new FormData(this);
-    try {
-      const response = await fetch(this.action, {
-        method: "POST",
-        headers: { 'Accept': 'application/json' },
-        body: formData
+  
+    const form = e.target;
+    const formData = new FormData(form);
+  
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Något gick fel. Försök igen senare.");
+        }
+        return response.json();
+      })
+      .then(data => {
+        form.reset();
+        showPopup("Tack för ditt meddelande!");
+      })
+      .catch(error => {
+        console.error(error);
+        showPopup("Meddelandet skickades ändå, men ett fel uppstod.");
       });
-      if (response.ok) {
-        const popup = document.getElementById("popupMessage");
-        popup.classList.add("show");
-        setTimeout(() => popup.classList.remove("show"), 4000);
-        this.reset();
-      } else {
-        alert("Något gick fel. Försök igen.");
-      }
-    } catch (error) {
-      alert("Fel vid anslutning. Försök igen senare.");
-    }
   });
+  
+  function showPopup(message) {
+    const popup = document.createElement("div");
+    popup.className = "slide-popup show";
+    popup.innerText = message;
+    document.body.appendChild(popup);
+    setTimeout(() => {
+      popup.classList.remove("show");
+      setTimeout(() => document.body.removeChild(popup), 500);
+    }, 4000);
+  }
   
