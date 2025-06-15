@@ -4,197 +4,101 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elkonsulten i Eskilstuna AB</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background-color: #fff;
-      color: #0e3461;
-      scroll-behavior: smooth;
-    }
-
-    header {
-      background-color: #0e3461;
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 1.5rem;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #ffa726;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #0e3461, #1f4a89);
-      color: white;
-      padding: 6rem 2rem;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero button {
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #ffa726;
-      border: none;
-      color: white;
-      font-weight: 600;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: transform 0.3s ease;
-    }
-
-    .hero button:hover {
-      transform: scale(1.05);
-    }
-
-    section {
-      padding: 4rem 2rem;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .card {
-      background-color: #f7f7f7;
-      border-radius: 10px;
-      padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-
-    .references {
-      min-height: 200px;
-      background-color: #eee;
-      border-radius: 8px;
-      padding: 2rem;
-    }
-
-    form {
-      max-width: 600px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    input, textarea {
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    input[type="submit"] {
-      background-color: #ffa726;
-      color: white;
-      border: none;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #fb8c00;
-    }
-
-    footer {
-      background-color: #0e3461;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav a {
-        margin: 0.5rem 0;
-      }
-    }
-  </style>
 </head>
 <body>
-  <header>
+  <header data-aos="fade-down">
     <div><strong>Elkonsulten i Eskilstuna AB</strong></div>
     <nav>
       <a href="#home">Hem</a>
       <a href="#services">Tjänster</a>
+      <a href="#partners">Samarbetspartners</a>
+      <a href="#team">Team</a>
       <a href="#references">Referenser</a>
       <a href="#contact">Kontakt</a>
     </nav>
   </header>
 
   <section class="hero" id="home">
-    <h1 data-aos="fade-up">Välkommen till Elkonsulten i Eskilstuna AB</h1>
+    <h1 data-aos="fade-up">Välkommen till<br><span>Elkonsulten i Eskilstuna AB</span></h1>
     <p data-aos="fade-up" data-aos-delay="200">Din partner inom elbesiktning, projektering och konsultation</p>
-    <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Kontakta oss</button>
+    <button data-aos="fade-up" data-aos-delay="400" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Kontakta oss</button>
   </section>
 
   <section id="services">
     <h2 data-aos="fade-up">Våra Tjänster</h2>
     <div class="cards">
-      <div class="card" data-aos="fade-right">
-        <h3>Elbesiktning</h3>
-        <p>Vi säkerställer att din elanläggning uppfyller alla krav på säkerhet och funktion.</p>
-      </div>
       <div class="card" data-aos="fade-up">
-        <h3>Projektering</h3>
-        <p>Planering och dimensionering av elinstallationer för nybyggnation eller renovering.</p>
-      </div>
+        <img src="icons/checklist.svg" alt="Elbesiktning"><h3>Elbesiktning</h3>
+        <p>Vi säkerställer att din elanläggning uppfyller alla krav på säkerhet och funktion.</p></div>
+      <div class="card" data-aos="fade-up">
+        <img src="icons/map-bolt.svg" alt="Projektering"><h3>Projektering</h3>
+        <p>Planering och dimensionering av elinstallationer för nybyggnation eller renovering.</p></div>
+      <div class="card" data-aos="fade-right">
+        <img src="icons/message.svg" alt="Konsultation"><h3>Konsultation</h3>
+        <p>Rådgivning och stöd i eltekniska frågor – från idé till färdig lösning.</p></div>
+      <div class="card" data-aos="fade-up">
+        <img src="icons/device-desktop-cog.svg" alt="Webbutveckling"><h3>Webbutveckling</h3>
+        <p>Vi skapar moderna, responsiva hemsidor – precis som den du tittar på just nu.</p></div>
+      <div class="card" data-aos="fade-up">
+        <img src="icons/briefcase-2.svg" alt="Projektledning"><h3>Projektledning</h3>
+        <p>Leder el- och byggprojekt med struktur, kvalitet och tidhållning i fokus.</p></div>
       <div class="card" data-aos="fade-left">
-        <h3>Konsultation</h3>
-        <p>Rådgivning och stöd i eltekniska frågor – från idé till färdig lösning.</p>
-      </div>
+        <img src="icons/bolt.svg" alt="Drift och teknikstöd"><h3>Drift & Teknikstöd</h3>
+        <p>Support och rådgivning vid drift och tekniska utmaningar inom el och fastighet.</p></div>
+      <div class="card" data-aos="fade-left">
+        <img src="icons/buildings.svg" alt="Byggledning"><h3>Byggledning & Idrifttagning</h3>
+        <p>Vi ser till att byggprojekt följer plan och att systemen fungerar vid uppstart.</p></div>
     </div>
   </section>
 
+  <section class="grid-two-column">
+    <div class="half-section" id="partners">
+      <h2 data-aos="fade-up">Samarbetspartners</h2>
+      <div class="references" data-aos="fade-up">
+        <div class="ref-card">
+          <img src="icons/partner1.png" alt="Partner 1">
+          <h4><a href="https://svensk-entreprenad.se" target="_blank">SEFAB</a></h4>
+          <p>Trygg leverantör som erbjuder helhetslösningar inom elinstallation, projektledning och besiktningar</p>
+        </div>
+      </div>
+    </div> 
+
+    <div class="half-section" id="team">
+      <h2 data-aos="fade-up">Vårt Team</h2>
+      <div class="team" data-aos="fade-up">
+        <div class="person">
+          <img src="icons/user.svg" alt="Medarbetare">
+          <h4>Jan Eric</h4>
+          <p>VD & Elkonsult</p>
+        </div>
+      </div>
+    </div>
+  </section> 
+
   <section id="references">
     <h2 data-aos="fade-up">Referenser</h2>
-    <div class="references" data-aos="fade-up" data-aos-delay="200">
-      <p>Här kommer vi inom kort visa några av våra genomförda projekt.</p>
+    <div class="references">
+      <div class="ref-card" data-aos="fade-up">
+        <img src="icons/question-mark.svg" alt="Projekt">
+        <h4>Företags Namn</h4><p>Vad du gjorde här</p></div>
+      <div class="ref-card" data-aos="fade-right">
+        <img src="icons/question-mark.svg" alt="Projekt">
+        <h4>Företags Namn</h4><p>Vad du gjorde här</p></div>
+      <div class="ref-card" data-aos="fade-up">
+        <img src="icons/question-mark.svg" alt="Projekt">
+        <h4>Företags Namn</h4><p>Vad du gjorde här</p></div>
+      <div class="ref-card" data-aos="fade-right">
+        <img src="icons/question-mark.svg" alt="Projekt">
+        <h4>Företags Namn</h4><p>Vad du gjorde här</p></div>
     </div>
   </section>
 
   <section id="contact">
     <h2 data-aos="fade-up">Kontakta oss</h2>
-    <form action="https://formsubmit.co/jan.eric@elkonsulteneskilstuna.se" method="POST" data-aos="fade-up" data-aos-delay="200">
+    <form id="contactForm" action="https://formsubmit.co/ajax/jan.eric@elkonsulteneskilstuna.se" method="POST" data-aos="fade-up">
       <input type="text" name="name" placeholder="Ditt namn" required>
       <input type="email" name="email" placeholder="Din e-post" required>
       <textarea name="message" rows="5" placeholder="Ditt meddelande" required></textarea>
@@ -202,13 +106,12 @@
     </form>
   </section>
 
-  <footer>
-    &copy; Elkonsulten i Eskilstuna AB 2025 – Designad av Carl Rosvall
+  <footer data-aos="fade-up">
+    &copy; 2025 Elkonsulten i Eskilstuna AB – Hemsida & Design: Carl Rosvall
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000 });
-  </script>
+  <script>AOS.init({ duration: 1000 });</script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>
