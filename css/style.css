@@ -194,7 +194,7 @@
     bottom: 30px;
     opacity: 1;
   }
-/* Gör sektionerna lika höga */
+
   .grid-two-column {
     display: flex;
     gap: 2rem;
