@@ -86,12 +86,13 @@
 
   <section id="contact">
     <h2 data-aos="fade-up">Kontakta oss</h2>
-    <form id="contactForm" action="https://formsubmit.co/info@elkonsulteneskilstuna.se" method="POST" data-aos="fade-up">
-      <input type="text" name="name" placeholder="Ditt namn" required>
-      <input type="email" name="email" placeholder="Din e-post" required>
-      <textarea name="message" rows="9" placeholder="Ditt meddelande" required></textarea>
-      <input type="submit" value="Skicka">
+    <form id="contactForm"
+        action="https://formsubmit.co/ajax/info@elkonsulteneskilstuna.se"
+        method="POST" data-aos="fade-up">
+      <input type="hidden" name="_subject" value="Kontakt från hemsidan">
+      <input type="hidden" name="_captcha" value="false">
     </form>
+
   </section>
 
   <footer>
