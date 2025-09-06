@@ -122,6 +122,7 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.5rem;
   align-items: stretch;
+  margin: 0 auto; /* center the section container */
 }
 
 .team {
@@ -135,13 +136,15 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  margin: 0 auto; /* center the section container */
 }
   
   .person, .ref-card {
     background-color: white;
     padding: 1.5rem;
     border-radius: 8px;
-    width: 320px;
+    width: 100%;
+    max-width: 540px; /* prevents overflow on mobile */
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
@@ -249,5 +252,21 @@
     }
     nav a {
       margin: 0.5rem 0;
+    }
+    .references {
+      grid-template-columns: 1fr;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+    .team {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .team .person, .references .ref-card {
+      width: 100%;
+      max-width: 540px;
+      margin: 0 auto;
     }
   }
