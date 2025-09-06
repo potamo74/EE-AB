@@ -6,14 +6,14 @@
   }
   
   body {
-    background-color: #fafafa;
-    color: #0e3461;
+    background-color: #DDC09F;
+    color: #2D2A24;
     scroll-behavior: smooth;
     line-height: 1.6;
   }
   
   header {
-    background-color: #0e3461;
+    background-color: #1f1d1a;
     color: white;
     position: sticky;
     top: 0;
@@ -22,6 +22,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 2px solid #956D37;
   }
   
   nav a {
@@ -32,11 +33,11 @@
   }
   
   nav a:hover {
-    color: #ffa726;
+    color: #956D37;
   }
   
   .hero {
-    background: linear-gradient(135deg, #0e3461, #1f4a89);
+    background-color: #2D2A24;
     color: white;
     padding: 6rem 2rem;
     text-align: center;
@@ -62,7 +63,7 @@
   .hero button {
     margin-top: 2rem;
     padding: 0.75rem 1.5rem;
-    background-color: #ffa726;
+    background-color: #956D37;
     border: none;
     color: white;
     font-weight: 600;
@@ -112,18 +113,29 @@
     margin-bottom: 1rem;
   }
   
-  .references, .team {
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    padding: 3rem;
-    margin-top: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
+.references {
+  background-color: #DDC09F;
+  border-radius: 8px;
+  padding: 3rem;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.team {
+  background-color: #DDC09F;
+  border-radius: 8px;
+  padding: 3rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
   
   .person, .ref-card {
     background-color: white;
@@ -132,6 +144,16 @@
     width: 320px;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .references .ref-card {
+    width: 100%;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;  
   }
   
   .person img, .ref-card img {
@@ -156,7 +178,7 @@
   }
   
   input[type="submit"] {
-    background-color: #ffa726;
+    background-color: #956D37;
     color: white;
     border: none;
     font-weight: bold;
@@ -164,11 +186,11 @@
   }
   
   input[type="submit"]:hover {
-    background-color: #fb8c00;
+    background-color: #956D37;
   }
   
   footer {
-    background-color: #0e3461;
+    background-color: #2D2A24;
     color: white;
     text-align: center;
     padding: 1rem;
@@ -180,7 +202,7 @@
     bottom: -100px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #0e3461;
+    background-color: #2D2A24;
     color: white;
     padding: 1rem 2rem;
     border-radius: 8px;
@@ -197,16 +219,17 @@
 
   .grid-two-column {
     display: flex;
+    flex-direction: column;
     gap: 2rem;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     padding: 5rem 2rem;
     flex-wrap: wrap;
   }
   
   .half-section {
     flex: 1 1 450px;
-    background-color: #f0f0f0;
+    background-color: #DDC09F;
     padding: 2rem;
     border-radius: 10px;
     display: flex;
@@ -228,4 +251,3 @@
       margin: 0.5rem 0;
     }
   }
-  
