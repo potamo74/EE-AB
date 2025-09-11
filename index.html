@@ -25,7 +25,6 @@
   <section class="hero" id="home">
     <h1 data-aos="fade-up">Välkommen till<br><span>Elkonsulten i Eskilstuna AB</span></h1>
     <p data-aos="fade-up" data-aos-delay="200">Din partner inom elbesiktning, projektering och konsultation</p>
-    <p data-aos="fade-up" data-aos-delay="200">(Denna sida är under konstruktion)</p>
     <button data-aos="fade-up" data-aos-delay="400" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Kontakta oss</button>
   </section>
 
@@ -59,6 +58,30 @@
     </div>
   </section>
 
+  <section id="contact">
+    <h2 data-aos="fade-up">Kontakta oss</h2>
+  
+    <form id="contactForm"
+          action="https://formsubmit.co/ajax/info@elkonsulteneskilstuna.se"
+          method="POST" data-aos="fade-up">
+  
+      <!-- synliga fält -->
+      <input type="text" name="name" placeholder="Ditt namn" required>
+      <input type="email" name="email" placeholder="Din e‑post" required>
+      <input type="tel" name="phone" placeholder="Telefon (valfritt)">
+      <textarea name="message" rows="6" placeholder="Ditt meddelande" required></textarea>
+  
+      <!-- submit-knapp (behövs för main.js) -->
+      <input type="submit" value="Skicka">
+  
+      <!-- dolda fält -->
+      <input type="hidden" name="_subject" value="Kontakt från hemsidan">
+      <input type="hidden" name="_captcha" value="false">
+      <!-- valfri honeypot mot spam -->
+      <input type="text" name="_honey" style="display:none">
+    </form>
+  </section>
+
   <section class="grid-two-column">
     <h2 data-aos="fade-up">Samarbetspartners</h2>
     <div class="references" data-aos="fade-up">
@@ -87,47 +110,7 @@
            reparationer, ombyggnationer, nyinstallationer, rotarbeten och mycket mer!</p>
       </div>
     </div>
-
-    <div class="half-section" id="team">
-      <h2 data-aos="fade-up">Vårt Team</h2>
-      <div class="team" data-aos="fade-up">
-        <div class="person">
-          <img src="icons/user.svg" alt="Medarbetare">
-          <h4>Namn</h4>
-          <p>Titel</p>
-        </div>
-        <div class="person">
-          <img src="icons/user.svg" alt="Medarbetare">
-          <h4>Namn</h4>
-          <p>Titel</p>
-        </div>
-      </div>
-    </div>
   </section> 
-
-  <section id="contact">
-    <h2 data-aos="fade-up">Kontakta oss</h2>
-  
-    <form id="contactForm"
-          action="https://formsubmit.co/ajax/info@elkonsulteneskilstuna.se"
-          method="POST" data-aos="fade-up">
-  
-      <!-- synliga fält -->
-      <input type="text" name="name" placeholder="Ditt namn" required>
-      <input type="email" name="email" placeholder="Din e‑post" required>
-      <input type="tel" name="phone" placeholder="Telefon (valfritt)">
-      <textarea name="message" rows="6" placeholder="Ditt meddelande" required></textarea>
-  
-      <!-- submit-knapp (behövs för main.js) -->
-      <input type="submit" value="Skicka">
-  
-      <!-- dolda fält -->
-      <input type="hidden" name="_subject" value="Kontakt från hemsidan">
-      <input type="hidden" name="_captcha" value="false">
-      <!-- valfri honeypot mot spam -->
-      <input type="text" name="_honey" style="display:none">
-    </form>
-  </section>
 
   <footer>
     &copy; 2025 Elkonsulten i Eskilstuna AB – Hemsida & Design: Carl Rosvall
