@@ -1,123 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elkonsulten i Eskilstuna AB</title>
-  <link href="css/style.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <img src="icons/EE-AB-vit.png" alt="Elkonsulten i Eskilstuna AB">
-    </div>
-    <nav>
-      <a href="#home">Hem</a>
-      <a href="#services">Tjänster</a>
-      <a href="#partners">Partners</a>
-      <a href="#team">Team</a>
-      <a href="#contact">Kontakt</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <section class="hero" id="home">
-    <h1 data-aos="fade-up">Välkommen till<br><span>Elkonsulten i Eskilstuna AB</span></h1>
-    <p data-aos="fade-up" data-aos-delay="200">Din partner inom elbesiktning, projektering och konsultation</p>
-    <button data-aos="fade-up" data-aos-delay="400" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Kontakta oss</button>
-  </section>
+    <title>Elkonsulten i Eskilstuna AB - Elbesiktning, Projektering & Konsultation</title>
 
-  <section id="services">
-    <h2 data-aos="fade-up">Våra Tjänster</h2>
-    <div class="cards">
-      <div class="card" data-aos="fade-up">
-        <img src="icons/checklist.svg" alt="Elsäkerhetsbesiktning"><h3>Elbesiktning</h3>
-        <p>Vi säkerställer att din elanläggning uppfyller alla krav på säkerhet och funktion.</p></div>
-      <div class="card" data-aos="fade-up">
-        <img src="icons/map-bolt.svg" alt="Projektering"><h3>Projektering</h3>
-        <p>Vi utför Idéskisser, Förstudier, Systemhandlingar Förfrågningsunderlag, Bygghandling, 
-          Underlag för PREFAB, Relationshandlingar, Drift och Skötselinstruktioner,  
-          CE Märkning mm
-          </p></div>
-      <div class="card" data-aos="fade-right">
-        <img src="icons/message.svg" alt="Konsultation"><h3>Konsultation</h3>
-        <p>Rådgivning och stöd i eltekniska frågor – från idé till färdig lösning.</p></div>
-      <div class="card" data-aos="fade-up">
-        <img src="icons/briefcase-2.svg" alt="Projektledning"><h3>Projektledning</h3>
-        <p>Leder el- och byggprojekt med struktur, kvalitet och tidhållning i fokus.</p></div>
-      <div class="card" data-aos="fade-left">
-        <img src="icons/bolt.svg" alt="Drift och teknikstöd"><h3>Drift & Teknikstöd</h3>
-        <p>Support och rådgivning vid drift och tekniska utmaningar inom el och fastighet.</p></div>
-      <div class="card" data-aos="fade-left">
-        <img src="icons/buildings.svg" alt="Byggledning"><h3>Byggledning & Idrifttagning</h3>
-        <p>Vi ser till att byggprojekt följer plan och att systemen fungerar vid uppstart.</p></div>
-        <div class="card" data-aos="fade-up">
-          <img src="icons/device-desktop-cog.svg" alt="Webbutveckling"><h3>Webbutveckling</h3>
-          <p>Vi skapar moderna, responsiva hemsidor – precis som den du tittar på just nu.</p></div>
-    </div>
-  </section>
+    <meta name="description" content="Din partner inom elbesiktning, projektering och konsultation. Professionella eltjänster i Eskilstuna." />
+    <meta name="author" content="Elkonsulten i Eskilstuna AB" />
 
-  <section id="contact">
-    <h2 data-aos="fade-up">Kontakta oss</h2>
-  
-    <form id="contactForm"
-          action="https://formsubmit.co/ajax/info@elkonsulteneskilstuna.se"
-          method="POST" data-aos="fade-up">
-  
-      <!-- synliga fält -->
-      <input type="text" name="name" placeholder="Ditt namn" required>
-      <input type="email" name="email" placeholder="Din e‑post" required>
-      <input type="tel" name="phone" placeholder="Telefon (valfritt)">
-      <textarea name="message" rows="6" placeholder="Ditt meddelande" required></textarea>
-  
-      <!-- submit-knapp (behövs för main.js) -->
-      <input type="submit" value="Skicka">
-  
-      <!-- dolda fält -->
-      <input type="hidden" name="_subject" value="Kontakt från hemsidan">
-      <input type="hidden" name="_captcha" value="false">
-      <!-- valfri honeypot mot spam -->
-      <input type="text" name="_honey" style="display:none">
-    </form>
-  </section>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <section class="grid-two-column">
-    <h2 data-aos="fade-up">Samarbetspartners</h2>
-    <div class="references" data-aos="fade-up">
-      <div class="ref-card">
-        <img src="icons/partner1.png" alt="Partner 1">
-        <h4><a href="https://svensk-entreprenad.se" target="_blank">SEFAB</a></h4>
-        <p>Trygg leverantör som erbjuder helhetslösningar inom elinstallation, projektledning och besiktningar</p>
-      </div>
-    
-      <div class="ref-card">
-        <img src="icons/partner3.jpg" alt="Partner 3">
-        <h4><a href="https://www.vimmerbyhus.se" target="_blank">Vimmerbyhus</a></h4>
-        <p>Designar och bygger kundunika hem sedan 1955</p>
-      </div>
-    
-      <div class="ref-card">
-        <img src="icons/partner4.png" alt="Partner 2">
-        <h4><a href="https://partner2.se" target="_blank">MA&RO</a></h4>
-        <p>Kort beskrivning om vad Partner 2 gör.</p>
-      </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta property="og:title" content="Elkonsulten i Eskilstuna AB" />
+    <meta
+      property="og:description"
+      content="Professionella eltjänster inom besiktning, projektering och konsultation."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.jpg" />
+    <meta property="og:locale" content="sv_SE" />
 
-      <div class="ref-card">
-        <img src="icons/partner2.png" alt="Partner 3">
-        <h4><a href="https://www.fridhemsel.se" target="_blank">Fridhems EL</a></h4>
-        <p>Utför felsökningar, service,
-           reparationer, ombyggnationer, nyinstallationer, rotarbeten och mycket mer!</p>
-      </div>
-    </div>
-  </section> 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Elkonsulten i Eskilstuna AB" />
+    <meta
+      name="twitter:description"
+      content="Din partner inom elbesiktning, projektering och konsultation."
+    />
+    <meta name="twitter:image" content="/og-image.jpg" />
+  </head>
 
-  <footer>
-    &copy; 2025 Elkonsulten i Eskilstuna AB – Hemsida & Design: Carl Rosvall
-  </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init({ duration: 1000 });</script>
-  <script src="js/main.js" defer></script>
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
